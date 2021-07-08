@@ -7,7 +7,10 @@
     <title>유한양행</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="library/fontawesome-free-5.15.3-web/css/all.min.css">
+    <link rel="stylesheet" href="library/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="library/slick-1.8.1/slick/slick-theme.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="library/slick-1.8.1/slick/slick.js"></script>
 </head>
 <body>
     <header class="header">
@@ -77,16 +80,62 @@
         </div>
         <!-- 카테고리 랩 -->
 
-    <div class="notice_wrap">
-        <div class="notice">
-            <h1>유한소식</h1>
-            <p>'한국에서 가장 존경받는 기업' 18년 연속 1위</p>
-        </div>
-        <!-- 공지사항 -->
+        <div class="notice_wrap">
+            <div class="notice">
+                <section class="notice1">
+                    <h1>유한소식</h1>
+                    <p>'한국에서 가장 존경받는 기업' 18년 연속 1위</p>
+                </section>
+                <section class="notice2">
+                    <h1>유한소식</h1>
+                    <p>'한국에서 가장 존경받는 기업' 18년 연속 1위</p>
+                </section>
+            </div>
+            <!-- 공지사항 -->
 
-    </div>
-    <!-- 공지사항 랩 -->
-        
+        </div>
+        <!-- 공지사항 랩 -->
+
+        <div class="brand_wrap">
+            <div class="brand_box fade">
+                <div class="brand brand_one">
+                    <h1>브랜드 이야기</h1>
+                    <img src="images/brand_img1.gif">
+                </div>
+                <div class="brand brand_two">
+                    <h1>브랜드 이야기</h1>
+                    <img src="images/brand_img2.gif">
+                </div>
+                <div class="brand brand_three">
+                    <h1>브랜드 이야기</h1>
+                    <img src="images/brand_img3.gif">
+                </div>
+                <div class="brand brand_four">
+                    <h1>브랜드 이야기</h1>
+                    <img src="images/brand_img4.gif">
+                </div>
+                <div class="brand brand_five">
+                    <h1>브랜드 이야기</h1>
+                    <img src="images/brand_img5.gif">
+                </div>
+                <div class="brand brand_six">
+                    <h1>브랜드 이야기</h1>
+                    <img src="images/brand_img6.gif">
+                </div>
+                <div class="brand brand_seven">
+                    <h1>브랜드 이야기</h1>
+                    <img src="images/brand_img7.gif">
+                </div>
+                <div class="brand brand_eight">
+                    <h1>브랜드 이야기</h1>
+                    <img src="images/brand_img8.gif">
+                </div>
+                <div class="brand brand_nine">
+                    <h1>브랜드 이야기</h1>
+                    <img src="images/brand_img9.gif">
+                </div>
+            </div>
+        </div>
     </div>
     <!-- 컨텐츠 -->
 
@@ -98,6 +147,15 @@
 
     </div>
     <!-- 푸터 랩 -->
-
+<script>
+    $('.fade').slick({
+        dots: true,
+        arrows: false,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear'
+    });
+</script>
 </body>
 </html>
