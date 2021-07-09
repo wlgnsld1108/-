@@ -35,17 +35,20 @@
     margin: 60px auto;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
-.category_wrap .category {
+.category_wrap .category a {
     display: flex;
 }
-.category_wrap .category > img {
+.category_wrap .category > a > img {
     margin-right: 20px;
 }
-.category_wrap .category > h1 {
+.category_wrap .category > a > .tit {
     align-self: center;
+    font-size: 2.2rem;
 }
-.category_wrap .category > h1::after {
+
+.tit::after {
     content: '';
     display: block;
     width: 40px;
@@ -61,9 +64,11 @@
 .notice_wrap .notice {
     width: 1400px;
     margin: 0 auto;
-    color: #fff;
     display: flex;
     flex-wrap: wrap;
+}
+.notice a {
+    color: #fff;
 }
 .notice h1 {
     font-size: 1.8rem;
@@ -72,13 +77,13 @@
     margin-left: 20px;
     font-size: 1.5rem;
 }
-.notice .notice1 {
+.notice .notice1 a {
     display: inline-flex;
     width: 700px;
     padding: 20px;
     border-right: 1px solid #00ab55;
 }
-.notice .notice2 {
+.notice .notice2 a {
     display: inline-flex;
     width: 700px;
     padding: 20px;
@@ -86,28 +91,125 @@
 
 .content .brand_wrap {
     width: 100%;
-    padding: 10px 0;
-    background: #f48543;
+    height: 300px;
+    position: relative;
+    background: url('../images/beecom-c.jpg') no-repeat 90% #f48543;
+    background-size: 15%;
 }
+.brand_wrap > h1 {
+    color: #000;
+    margin-left: 260px;
+    padding-top: 20px;
+}
+.brand_wrap > .tit::after {
+    background: #000;
+}
+
 .brand_wrap .brand_box {
     width: 1400px;
-    margin: 0 auto;
+    margin: 50px auto 0 auto;
+    display: flex;
 }
 .brand_box .brand {
-
-}
-.brand_box .brand > h1 {
-    color: #000;
-    margin-bottom: 40px;
-}
-.brand_box .brand > h1::after {
-    content: '';
-    display: block;
-    width: 40px;
-    height: 3px;
-    background: #000;
-    margin-top: 5px;
+    overflow: hidden;
+    margin-top: 10px;
 }
 .brand_box .brand > img {
     width: 150px;
+}
+.brand > img {
+    float: left;
+}
+.brand .brand_intro {
+    float: left;
+    width: 800px;
+    margin-left: 80px;
+}
+.brand_intro > h2 {
+    font-size: 1.6rem;
+}
+.brand_intro > p {
+    margin-top: 10px;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    word-break: keep-all;
+}
+.btn {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #000;
+}
+.btn a {
+    display: block;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.content .health_wrap {
+    width: 1400px;
+    margin: 60px auto;
+}
+.health_wrap > .tit > p {
+    display: inline-block;
+    font-size: 1.4rem;
+    color: #0074aa;
+}
+
+.health_wrap .health {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.health .book {
+    margin-right: 20px; 
+    margin-top: 40px;
+}
+.health .book > a {
+    text-align: center;
+    font-size: 1.5rem;
+}
+.health .book img {
+    width: 200px;
+    border: 1px solid #ddd;
+}
+
+.yuilhan_wrap {
+    width: 100%;
+    padding-top: 40px;
+    background: #ebedf2;
+}
+.yuilhan {
+    width: 1400px;
+    height: 350px;
+    margin: 0 auto;
+    position: relative;
+    background: url('../images/dr_yu.gif') no-repeat 90%;
+    background-size: contain;
+}
+.yuilhan > .btn {
+    bottom: 40px;
+    left: 50px;
+    width: 120px;
+}
+.yuilhan .analects {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+}
+.analects > p {
+    font-size: 1.8rem;
+}
+.analects > h1 {
+    font-size: 2.4rem;
+    margin-top: 10px;
+}
+.analects > p:last-of-type {
+    font-size: 1.4rem;
+}
+
+@media all and (min-width: 768px) and (max-width: 1023px) {
+    
 }
