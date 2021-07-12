@@ -13,8 +13,9 @@ var bgColor = [
     '#a7865c'
 ]
 $(function() {
-    for(var i = 0; i < slideList.length; i++)
-    if($('.slick-active').parents('.brand_wrap').css({
-            'background': bgColor[i]
-        }));
+    for(var i = 0; i < slideList.length; i++) {
+        $('.slick-active').parents('.brand_wrap').css({
+                'background': bgColor[i]
+            });
+    }
 });
