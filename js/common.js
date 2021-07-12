@@ -5,3 +5,9 @@ $(function() {
     });
 });
 
+// 패밀리사이트
+function onFamilySite(url) {
+    if(url) {
+        window.open(value);
+    }
+}
