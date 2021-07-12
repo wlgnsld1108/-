@@ -1,6 +1,4 @@
-// 슬라이드 변경
-var slideList = document.querySelectorAll('.slick-dots li');
-
+// 슬라이드 내용 변경
 var bgColor = [
     '#f48543',
     '#04a04e',
@@ -12,16 +10,26 @@ var bgColor = [
     '#6f4bb1',
     '#a7865c'
 ]
-$(function() {
-    $('.slick-dots li').click(function(){
-        var idx = $(this).index();
-        console.log(idx);
 
+var bgImg = [
+    'product1.png',
+    'product2.png',
+    'product3.png',
+    'product4.png',
+    'product5.png',
+    'product6.png',
+    'product7.png',
+    'product8.png',
+    'product9.png',
+]
+
+$(function() {
+    $('.slick-dots li').on('click', function(){
+        var idx = $(this).index();
+        var url = "url('images/" + bgImg[idx] + "') no-repeat 90% " + bgColor[idx];
+
+        $('.brand_wrap').css({
+            'background': url
+        });
     });
-    
-    for(var i = 0; i < slideList.length; i++) {
-        $('.slick-active').parents('.brand_wrap').css({
-                'background': bgColor[i]
-            });
-    }
-});
+});    

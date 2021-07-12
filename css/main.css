@@ -93,16 +93,15 @@
     width: 100%;
     height: 300px;
     position: relative;
-    background: url('../images/beecom-c.jpg') no-repeat 90% #f48543;
-    background-size: 15%;
+    background: url('../images/product1.png') no-repeat 90% 90% #f48543;
 }
 .brand_wrap > h1 {
-    color: #000;
+    color: #fff;
     margin-left: 260px;
     padding-top: 20px;
 }
 .brand_wrap > .tit::after {
-    background: #000;
+    background: #fff;
 }
 
 .brand_wrap .brand_box {
@@ -127,12 +126,14 @@
 }
 .brand_intro > h2 {
     font-size: 1.6rem;
+    color: #fff;
 }
 .brand_intro > p {
     margin-top: 10px;
     font-size: 1.4rem;
     line-height: 2rem;
     word-break: keep-all;
+    color: #fff;
 }
 .btn {
     position: absolute;
@@ -140,12 +141,13 @@
     width: 80px;
     height: 40px;
     line-height: 40px;
-    border: 1px solid #000;
+    border: 1px solid #fff;
 }
 .btn a {
     display: block;
     text-align: center;
     font-size: 1.6rem;
+    color: #fff;
 }
 
 .content .health_wrap {
@@ -193,6 +195,10 @@
     bottom: 40px;
     left: 50px;
     width: 120px;
+    border: 1px solid #000;
+}
+.yuilhan > .btn a {
+    color:#000;
 }
 .yuilhan .analects {
     position: absolute;
