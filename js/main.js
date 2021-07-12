@@ -13,6 +13,12 @@ var bgColor = [
     '#a7865c'
 ]
 $(function() {
+    $('.slick-dots li').click(function(){
+        var idx = $(this).index();
+        console.log(idx);
+
+    });
+    
     for(var i = 0; i < slideList.length; i++) {
         $('.slick-active').parents('.brand_wrap').css({
                 'background': bgColor[i]
