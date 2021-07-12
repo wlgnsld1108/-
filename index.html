@@ -299,8 +299,7 @@
     <!-- slick.js -->
 
     <script>
-        var slideList = document.querySelectorAll('.slick-dots li');
-
+        // var slideList = document.querySelectorAll('.slick-dots li');
         var bgColor = [
             '#f48543',
             '#04a04e',
@@ -313,10 +312,18 @@
             '#a7865c'
         ]
         $(function() {
-            for(var i = 0; i < slideList.length; i++)
-            if($('.slick-active').parents('.brand_wrap').css({
-                    'background': bgColor[i]
-                }));
+
+            $('.slick-dots li').click(function(){
+                var idx = $(this).index();
+                console.log(idx);
+
+            });
+            // for(var i = 0; i < slideList.length; i++) {
+
+            // }
+            // if($('.slick-active').parents('.brand_wrap').css({
+            //         'background': bgColor[i]
+            //     }));
         });
     </script>
 </body>
