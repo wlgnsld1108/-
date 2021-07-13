@@ -13,38 +13,80 @@
     <script src="library/slick-1.8.1/slick/slick.js"></script>
 </head>
 <body>
-    <header class="header">
-        <div class="nav_bar">
-            <a href="#"><img src="images/hamburger.svg" alt="메뉴"></a>
-        </div>
-        <!-- 햄버거메뉴 -->
+    <div class="header_wrap">
+        <header class="header">
+            <div class="nav_bar">
+                <a href="#"><img src="images/hamburger_w.svg" alt="메뉴"></a>
+                <div class="nav_menu">
+                    <ul>
+                        <li><a href="#">유한소개</a></li>
+                        <li><a href="#">회사개요</a></li>
+                        <li><a href="#">회사 연혁</a></li>
+                        <li><a href="#">사업 분야</a></li>
+                        <li><a href="#">홍보</a></li>
+                        <li><a href="#">가족 회사</a></li>
+                        <li><a href="#">오시는 길</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">제품정보</a></li>
+                        <li><a href="#">제품정보</a></li>
+                        <li><a href="#">제품소식</a></li>
+                        <li><a href="#">제품 외형별 검색</a></li>
+                        <li><a href="#">가정상비약</a></li>
+                        <li><a href="#">브랜드 이야기</a></li>
+                        <li><a href="#">약국찾기</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">창업자 유일한</a></li>
+                        <li><a href="#">유일한박사 온라인기념관</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">온라인 상담</a></li>
+                        <li><a href="#">뉴스 및 공지</a></li>
+                        <li><a href="#">자주 묻는 질문</a></li>
+                    </ul>
+                </div>    
+                <!-- 네비게이션 목록 -->
 
-        <div class="logo">
-            <a href="#"><img src="images/logo.png" alt="유한양행 로고"></a>
-        </div>
-        <!-- 로고 -->
+            </div>
+            <!-- 햄버거메뉴 -->
 
-        <div class="search">
-            <a href="#"><img src="images/search_icon.png" alt="검색"></a>
-        </div>
-        <!-- 검색 -->
+            <div class="logo">
+                <a href="index.html"><img src="images/logo_w.png" alt="유한양행 로고"></a>
+            </div>
+            <!-- 로고 -->
 
-        <div class="globe">
-            <a href="#"><img src="images/globe_icon.png" alt="언어"></a>
-        </div>
-        <!-- 언어 -->
+            <div class="search">
+                <a href="#"><img src="images/search_icon_w.png" alt="검색"></a>
+            </div>
+            <!-- 검색 -->
 
-    </header>
-    <!-- 헤더 -->
+            <div class="globe">
+                <a href="#"><img src="images/globe_icon_w.png" alt="언어"></a>
+            </div>
+            <!-- 언어 -->
+
+        </header>
+        <!-- 헤더 -->
+
+        <form id="search_wrap">
+            <input type="text" id="search_bar" placeholder="찾으실 제품명을 입력해주세요">
+            <input type="submit" id="search_btn" value="검색">
+        </form>
+        <!-- 검색창 -->
+
+    </div>
+    <!-- 헤더 랩 -->
+
 
     <div class="main">
         <video autoplay muted loop id="videoBg">
             <source src="video/mountains.mp4" type="video/mp4">
         </video>    
         <div class="txt_box">
-            <h1>Lorem Ipsum</h1>
-            <p>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</p>
-            <p>"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."</p>
+            <h1>유한양행</h1>
+            <p>인류건강의 길을 앞서갑니다</p>
         </div>
         <!-- 텍스트 박스 -->
 
@@ -291,7 +333,7 @@
                 </div>
                 <address>
                     서울시 동작구 노량진로 74문의전화 : 02)828-0181FAX : 02)828-0050대표자 : 조욱제사업자등록번호 : 118-81-00601
-                    <span>COPYRIGHT (C) 2013 YUHAN. ALL RIGHT RESERVED</span>
+                    <br>COPYRIGHT (C) 2013 YUHAN. ALL RIGHT RESERVED</br>
                 </address>
             </div>
             <div class="ft_right">
@@ -308,6 +350,8 @@
                     <option value="http://www.janssenkorea.com">주식회사 한국얀센</option>
                     <option value="http://www.yuhanmedica.co.kr">유한메디카</option>
                 </select>
+                <br>
+                <img src="images/yuhan_mark.png">
             </div>
         </footer>
         <!-- 푸터 -->
