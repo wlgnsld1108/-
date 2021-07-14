@@ -9,6 +9,9 @@ $(function() {
 $(window).on('scroll', function() {
     var sc_top = $(this).scrollTop();
 
+    $('#bg_cover').hide();
+    $('#search_wrap, .nav_menu').slideUp(200);
+
     if(sc_top > 760) {
         $('.header').css('background', 'rgba(255, 255, 255, .5)');
         $('.nav_bar img').attr('src', 'images/hamburger_b.svg');
@@ -26,13 +29,39 @@ $(window).on('scroll', function() {
     }
 });
 
+
+// 네비게이션 햄버거 메뉴 클릭시
+$(function() {
+    $('.nav_menu').hide();
+    
+    $('.header .nav_bar').click(function(e) {
+        e.stopPropagation();
+        $('#bg_cover').toggle();
+        $('.nav_menu').slideToggle(200);
+    });
+
+    $(document).click(function(){
+        $('#bg_cover').hide();
+        $('.nav_menu').slideUp(200);
+    });
+});
+
 // 검색바
 $(function() {
     $('#search_wrap').hide();
-
-    $('.header .search').click(function() {
+    
+    $('.header .search').click(function(e) {
+        e.stopPropagation();
+        $('#bg_cover').toggle();
         $('#search_wrap').slideToggle(200);
+
     });
+    
+    $(document).click(function(){
+        $('#bg_cover').hide();
+        $('#search_wrap').slideUp(200);
+    });
+    
 });
 
 // 패밀리사이트

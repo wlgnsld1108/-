@@ -28,7 +28,7 @@ $(function() {
         var idx = $(this).index();
         var url = "url('images/" + bgImg[idx] + "') no-repeat 90% " + bgColor[idx];
 
-        $('.brand_wrap').css({
+        $('.brand_bg').css({
             'background': url
         });
     });

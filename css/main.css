@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 .main {
+    width: 100%;
     height: 820px;
     position: relative;
     overflow: hidden;
@@ -36,7 +37,7 @@
     width: 1400px;
     margin: 60px auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 .category_wrap .category a {
@@ -67,7 +68,6 @@
     width: 1400px;
     margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
 }
 .notice a {
     color: #fff;
@@ -79,41 +79,42 @@
     margin-left: 20px;
     font-size: 1.5rem;
 }
-.notice .notice1 a {
-    display: inline-flex;
+.notice .notice1 {
     width: 700px;
     padding: 20px;
     border-right: 1px solid #00ab55;
 }
-.notice .notice2 a {
-    display: inline-flex;
+.notice .notice2 {
     width: 700px;
     padding: 20px;
 }
+.notice .notice1 a {
+    display: inline-flex;
+}
+.notice .notice2 a {
+    display: inline-flex;
+}
 
-.content .brand_wrap {
+.content .brand_bg {
     width: 100%;
     height: 300px;
     position: relative;
     background: url('../images/product1.png') no-repeat 90% 90% rgba(244, 133, 67, 1);
 }
-.brand_wrap > h1 {
+.brand_bg .brand_wrap > h1 {
     color: #fff;
-    margin-left: 260px;
     padding-top: 20px;
 }
 .brand_wrap > .tit::after {
     background: #fff;
 }
 
-.brand_wrap .brand_box {
+.brand_wrap {
     width: 1400px;
-    margin: 50px auto 0 auto;
-    display: flex;
+    margin: 0 auto;
 }
-.brand_box .brand {
-    overflow: hidden;
-    margin-top: 10px;
+.brand_box {
+    margin-top: 50px;
 }
 .brand_box .brand > img {
     width: 150px;
@@ -138,12 +139,11 @@
     color: #fff;
 }
 .btn {
-    position: absolute;
-    bottom: 0;
     width: 80px;
     height: 40px;
     line-height: 40px;
     border: 1px solid #fff;
+    margin-top: 20px;
 }
 .btn a {
     display: block;
@@ -164,7 +164,7 @@
 
 .health_wrap .health {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }
 .health .book {
@@ -193,19 +193,19 @@
     background: url('../images/dr_yu.gif') no-repeat 90%;
     background-size: contain;
 }
-.yuilhan > .btn {
+.yuilhan .analects {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+}
+.analects > .btn {
     bottom: 40px;
     left: 50px;
     width: 120px;
     border: 1px solid #000;
 }
-.yuilhan > .btn a {
+.analects > .btn a {
     color:#000;
-}
-.yuilhan .analects {
-    position: absolute;
-    top: 100px;
-    left: 50px;
 }
 .analects > p {
     font-size: 1.8rem;
@@ -218,6 +218,44 @@
     font-size: 1.4rem;
 }
 
-@media all and (min-width: 768px) and (max-width: 1023px) {
-    
+@media screen and (max-width: 1400px) {
+    .content .category_wrap {
+        width: 70%;
+    }
+
+    .notice_wrap .notice {
+        width: 100%;
+    }
+    .notice .notice1, .notice2 {
+        width: 600px;
+    }
+    .brand_wrap {
+        width: 90%;
+    }
+    .brand .brand_intro {
+        float: left;
+        width: 50%;
+    }
+    .content .health_wrap {
+        width: 90%;
+    }
+
+    .yuilhan {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .notice_wrap .notice{
+        display: block;
+        text-align: center;
+    }
+    .notice .notice1 {
+        width: 100%;
+        border-right: 0;
+        border-bottom: 1px solid #00ab55;
+    }
+    .notice .notice2 {
+        width: 100%;
+    }
 }
