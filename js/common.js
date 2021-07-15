@@ -13,15 +13,15 @@ $(window).on('scroll', function() {
     $('#search_wrap, .nav_menu').slideUp(200);
 
     if(sc_top > 760) {
-        $('.header').css('background', 'rgba(255, 255, 255, .5)');
-        $('.nav_bar img').attr('src', 'images/hamburger_b.svg');
+        $('.header').css('background', '#fff');
+        $('.menu_bar span').css('background', '#000');
         $('.logo img').attr('src', 'images/logo_b.png');
         $('.search img').attr('src', 'images/search_icon_b.png');
         $('.globe img').attr('src', 'images/globe_icon_b.png');
-        $('#search_wrap').css('background', 'rgba(255, 255, 255, .5)');
+        $('#search_wrap').css('background', '#fff');
     } else {
         $('.header').css('background', '#008944');
-        $('.nav_bar img').attr('src', 'images/hamburger_w.svg');
+        $('.menu_bar span').css('background', '#fff');
         $('.logo img').attr('src', 'images/logo_w.png');
         $('.search img').attr('src', 'images/search_icon_w.png');
         $('.globe img').attr('src', 'images/globe_icon_w.png');        
@@ -29,18 +29,24 @@ $(window).on('scroll', function() {
     }
 });
 
-
 // 네비게이션 햄버거 메뉴 클릭시
 $(function() {
     $('.nav_menu').hide();
     
     $('.header .nav_bar').click(function(e) {
+        
+        $('.menu_bar').toggleClass('active');
         e.stopPropagation();
         $('#bg_cover').toggle();
         $('.nav_menu').slideToggle(200);
     });
 
     $(document).click(function(){
+        $('#bg_cover').hide();
+        $('.nav_menu').slideUp(200);
+    });
+    
+    $('.header .search').click(function(){
         $('#bg_cover').hide();
         $('.nav_menu').slideUp(200);
     });
@@ -54,7 +60,6 @@ $(function() {
         e.stopPropagation();
         $('#bg_cover').toggle();
         $('#search_wrap').slideToggle(200);
-
     });
     
     $(document).click(function(){

@@ -58,6 +58,10 @@
     height: 3px;
     background: #008944;
     margin-top: 5px;
+    transition: all .2s;
+}
+.category:hover .tit::after {
+    width: 80px;
 }
 
 .content .notice_wrap {
@@ -97,7 +101,6 @@
 
 .content .brand_bg {
     width: 100%;
-    height: 300px;
     position: relative;
     background: url('../images/product1.png') no-repeat 90% 90% rgba(244, 133, 67, 1);
 }
@@ -112,9 +115,13 @@
 .brand_wrap {
     width: 1400px;
     margin: 0 auto;
+    padding-bottom: 20px;
 }
 .brand_box {
     margin-top: 50px;
+}
+.brand_box .brand {
+    overflow: hidden;
 }
 .brand_box .brand > img {
     width: 150px;
@@ -124,19 +131,24 @@
 }
 .brand .brand_intro {
     float: left;
-    width: 600px;
+    width: 700px;
     margin-left: 80px;
 }
 .brand_intro > h2 {
     font-size: 1.6rem;
     color: #fff;
+    margin-bottom: 10px;
 }
 .brand_intro > p {
-    margin-top: 10px;
     font-size: 1.4rem;
-    line-height: 2rem;
     word-break: keep-all;
     color: #fff;
+    line-height: 2rem;
+}
+.brand_intro > p:last-of-type {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .btn {
     width: 80px;
@@ -178,6 +190,9 @@
 .health .book img {
     width: 200px;
     border: 1px solid #ddd;
+}
+.book:hover img {
+    border: 2px solid #008944;
 }
 
 .yuilhan_wrap {
@@ -229,23 +244,59 @@
     .notice .notice1, .notice2 {
         width: 600px;
     }
+    .brand_bg {
+        position: relative;
+    }
+    .brand_bg::before {
+        content: "";
+        opacity: .3;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #000;
+    }
     .brand_wrap {
         width: 90%;
+    }
+    .brand_wrap > .tit {
+        position: relative;
+        z-index: 1;
     }
     .brand .brand_intro {
         float: left;
         width: 50%;
+        text-shadow: 1px 1px 1px #000;
     }
     .content .health_wrap {
         width: 90%;
     }
 
-    .yuilhan {
+    .yuilhan_wrap .yuilhan {
         width: 90%;
     }
 }
 
 @media screen and (max-width: 1200px) {
+    .main {
+        height: 720px;
+    }    
+    .main .txt_box {
+        position: static;
+        text-align: center;
+        margin-top: 300px;
+    }
+    .main .txt_box h1 {
+        color: #fff;
+        font-size: 6rem;
+    }
+    .main .txt_box p {
+        color: #fff;
+        font-size: 2.8rem;
+        margin-top: 10px;
+    }
+
     .notice_wrap .notice{
         display: block;
         text-align: center;
@@ -257,5 +308,17 @@
     }
     .notice .notice2 {
         width: 100%;
+    }
+    .yuilhan_wrap .yuilhan {
+        background-image: none;
+    }    
+}
+
+@media screen and (max-width: 920px) {
+    .content .category_wrap {
+        justify-content: center;
+    }
+    .category_wrap .category {
+        margin-top: 20px;
     }
 }
