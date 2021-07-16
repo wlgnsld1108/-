@@ -40,13 +40,13 @@
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.category_wrap .category a {
+.category_wrap a.category {
     display: flex;
 }
-.category_wrap .category > a > img {
+.category_wrap a.category > img {
     margin-right: 20px;
 }
-.category_wrap .category > a > .tit {
+.category_wrap a.category > .tit {
     align-self: center;
     font-size: 2.2rem;
 }
@@ -60,7 +60,7 @@
     margin-top: 5px;
     transition: all .2s;
 }
-.category:hover .tit::after {
+a.category:hover .tit::after {
     width: 80px;
 }
 
@@ -182,9 +182,9 @@
 .health .book {
     margin-right: 20px; 
     margin-top: 40px;
+    text-align: center;
 }
 .health .book > a {
-    text-align: center;
     font-size: 1.5rem;
 }
 .health .book img {
@@ -233,7 +233,7 @@
     font-size: 1.4rem;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1440px) {
     .content .category_wrap {
         width: 70%;
     }
@@ -244,6 +244,7 @@
     .notice .notice1, .notice2 {
         width: 600px;
     }
+
     .brand_bg {
         position: relative;
     }
@@ -278,7 +279,7 @@
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1280px) {
     .main {
         height: 720px;
     }    
@@ -314,11 +315,20 @@
     }    
 }
 
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 1023px) {
     .content .category_wrap {
-        justify-content: center;
+        width: 100%;
     }
-    .category_wrap .category {
+    .category_wrap a.category {
+        width: 100%;
+        justify-content: center;
         margin-top: 20px;
     }
+    .health .book {
+        flex: 1 1 0;
+    }    
+}
+
+@media screen and (max-width: 768px) {
+    
 }

@@ -37,7 +37,7 @@ body {font-family: 'Nanum Gothic', sans-serif;}
     background: #008944;
 }
 
-/* 내비게이션 */
+/* 내비게이션 햄버거메뉴 */
 .header .nav_bar {
     position: absolute;
     top: 35px;
@@ -102,11 +102,11 @@ transform: translateY(-15px) rotate(45deg);
     float: left;
     margin: 30px 50px 30px 0;
 }
-.nav_menu > ul > li:first-child {
+.nav_menu > ul > li.top_menu {
     margin-left:  100px;
     margin-right: 60px;
 }
-.nav_menu > ul > li:first-child > a {
+.nav_menu > ul > li.top_menu > a {
     font-size: 2.2rem;
     font-weight: 700;
 }
@@ -159,8 +159,12 @@ transform: translateY(-15px) rotate(45deg);
     color: #fff;
 }
 
+.nav_menu .lang {
+    display: none;
+}
+
 /* 검색창 */
-.header_wrap #search_wrap {
+.header_wrap .search_wrap {
     position: fixed;
     left: 0;
     top: 100px;
@@ -173,14 +177,14 @@ transform: translateY(-15px) rotate(45deg);
     justify-content: center;
     align-items: center;
 }
-#search_wrap #search_bar {
+.search_wrap #search_bar {
     width: 700px;
     height: 50px;
     border: 1px solid #aaa;
     font-size: 1.4rem;
     text-indent: 10px;
 }
-#search_wrap #search_btn {
+.search_wrap #search_btn {
     background: #008944;
     border: 0;
     color: #fff;
@@ -193,6 +197,97 @@ transform: translateY(-15px) rotate(45deg);
 }
 input:focus {
     outline:none;
+}
+
+/* 내비게이션 하위메뉴 탭으로 변경, 검색창 길이 반응형 */
+@media screen and (max-width: 1023px) {
+    .nav_menu {
+        width: 50%;
+        padding-bottom: 50px;
+    }
+    .nav_menu > ul {
+        overflow: visible;
+        border-bottom: 0;
+    }
+    .nav_menu > ul > li {
+        float: none;
+        margin: 0;
+        border-bottom: 1px solid #ccc;
+    }
+    .nav_menu > ul > li:nth-child(n+2) {
+        display: none;
+        background: #f9f9f9;
+    }
+    .nav_menu > ul > li.top_menu {
+        margin-left:  0;
+        margin-right: 0;
+        position: relative;
+    }
+    .nav_menu > ul > li.top_menu::after {
+        content: "+";
+        display: inline-block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 2rem;
+        font-weight: 700;
+        color: #333;
+    }
+    .nav_menu > ul > li.top_menu > a {
+        font-size: 2rem;
+    }
+    .nav_menu > ul > li > a {
+        display: inline-block;
+        text-indent: 30px;
+        font-size: 1.6rem;
+        line-height: 0;
+        padding: 30px 0;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .header .nav_bar {
+        position: absolute;
+        left: 30px;
+    }
+    .nav_menu {
+        padding-bottom: 0;
+    }
+    .nav_menu .lang {
+        display: block;
+        padding: 20px 0;
+        text-indent: 30px;
+    }
+    .nav_menu .lang > a {
+        font-size: 1.4rem;
+    }
+    .nav_menu .lang > a:first-child {
+        font-weight: 800;
+        padding-right: 10px;
+        border-right: 1px solid #ccc;
+    }
+    .nav_menu .lang > a:last-child {
+        margin-left: 10px;
+        color: #666;
+    }
+
+    .search_wrap #search_bar {
+        width: 60%;
+    }
+
+    .header .logo > a > img {
+        width: 200px;
+    }
+
+    .header .search {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+    }
+    
+    .header .globe {
+        display: none;
+    }    
 }
 
 /* 푸터 */
@@ -258,7 +353,7 @@ select{
     background: url('../images/select_arrow.png') no-repeat 97%;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1440px) {
     .footer_wrap .footer {
         width: 90%;
     }

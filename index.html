@@ -25,7 +25,7 @@
 
             <div class="nav_menu">
                 <ul>
-                    <li><a href="#">유한소개</a></li>
+                    <li class="top_menu"><a href="#">유한소개</a></li>
                     <li><a href="#">회사개요</a></li>
                     <li><a href="#">회사 연혁</a></li>
                     <li><a href="#">사업 분야</a></li>
@@ -34,7 +34,7 @@
                     <li><a href="#">오시는 길</a></li>
                 </ul>
                 <ul>
-                    <li><a href="#">제품정보</a></li>
+                    <li class="top_menu"><a href="#">제품정보</a></li>
                     <li><a href="#">제품정보</a></li>
                     <li><a href="#">제품소식</a></li>
                     <li><a href="#">제품 외형별 검색</a></li>
@@ -43,15 +43,19 @@
                     <li><a href="#">약국찾기</a></li>
                 </ul>
                 <ul>
-                    <li><a href="#">창업자 유일한</a></li>
+                    <li class="top_menu"><a href="#">창업자 유일한</a></li>
                     <li><a href="#">유일한박사 온라인기념관</a></li>
                 </ul>
                 <ul>
-                    <li><a href="#">고객센터</a></li>
+                    <li class="top_menu"><a href="#">고객센터</a></li>
                     <li><a href="#">온라인 상담</a></li>
                     <li><a href="#">뉴스 및 공지</a></li>
                     <li><a href="#">자주 묻는 질문</a></li>
                 </ul>
+                <div class="lang">
+                    <a href="#">KOR</a>
+                    <a href="#">ENG</a>
+                </div>
             </div>    
             <!-- 네비게이션 목록 -->
 
@@ -73,7 +77,7 @@
         </header>
         <!-- 헤더 -->
 
-        <form id="search_wrap">
+        <form class="search_wrap">
             <input type="text" id="search_bar" placeholder="찾으실 제품명을 입력해주세요">
             <input type="submit" id="search_btn" value="검색">
         </form>
@@ -81,7 +85,6 @@
 
     </div>
     <!-- 헤더 랩 -->
-
 
     <div class="main">
         <video autoplay muted loop id="videoBg">
@@ -98,36 +101,28 @@
 
     <div class="content">
         <div class="category_wrap">
-            <div class="category">
-                <a href="#">
-                    <img src="images/about_us.jpg">
-                    <h1 class="tit">유한소개</h1>
-                </a>
-            </div>
+            <a href="#" class="category">
+                <img src="images/about_us.jpg">
+                <h1 class="tit">유한소개</h1>
+            </a>
             <!-- 분류 -->
 
-            <div class="category">
-                <a href="#">
-                    <img src="images/product_about.jpg">
-                    <h1 class="tit">제품정보</h1>
-                </a>
-            </div>
+            <a href="#" class="category">
+                <img src="images/product_about.jpg">
+                <h1 class="tit">제품정보</h1>
+            </a>
             <!-- 분류 -->
 
-            <div class="category">
-                <a href="#">
-                    <img src="images/founder.jpg">
-                    <h1 class="tit">창업자 유일한</h1>
-                </a>
-            </div>
+            <a href="#" class="category">
+                <img src="images/founder.jpg">
+                <h1 class="tit">창업자 유일한</h1>
+            </a>
             <!-- 분류 -->
 
-            <div class="category">
-                <a href="#">
-                    <img src="images/about_us.jpg">
-                    <h1 class="tit">고객센터</h1>
-                </a>
-            </div>
+            <a href="#" class="category">
+                <img src="images/about_us.jpg">
+                <h1 class="tit">고객센터</h1>
+            </a>
             <!-- 분류 -->
 
         </div>
