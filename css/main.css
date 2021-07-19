@@ -41,13 +41,15 @@
     flex-wrap: wrap;
 }
 .category_wrap a.category {
-    display: flex;
+    overflow: hidden;
 }
 .category_wrap a.category > img {
+    float: left;
     margin-right: 20px;
 }
 .category_wrap a.category > .tit {
-    align-self: center;
+    float: left;
+    margin-top: 70px;
     font-size: 2.2rem;
 }
 
@@ -71,24 +73,29 @@ a.category:hover .tit::after {
 .notice_wrap .notice {
     width: 1400px;
     margin: 0 auto;
-    display: flex;
+    overflow: hidden;
 }
 .notice a {
     color: #fff;
 }
-.notice h1 {
+.notice h2 {
     font-size: 1.8rem;
 }
 .notice p {
     margin-left: 20px;
     font-size: 1.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .notice .notice1 {
+    float: left;
     width: 700px;
     padding: 20px;
     border-right: 1px solid #00ab55;
 }
 .notice .notice2 {
+    float: left;
     width: 700px;
     padding: 20px;
 }
@@ -102,7 +109,7 @@ a.category:hover .tit::after {
 .content .brand_bg {
     width: 100%;
     position: relative;
-    background: url('../images/product1.png') no-repeat 90% 90% rgba(244, 133, 67, 1);
+    background: url('../images/product1.png') no-repeat 90% 80% rgba(244, 133, 67, 1);
 }
 .brand_bg .brand_wrap > h1 {
     color: #fff;
@@ -124,6 +131,7 @@ a.category:hover .tit::after {
     overflow: hidden;
 }
 .brand_box .brand > img {
+    display: inline-block;
     width: 150px;
 }
 .brand > img {
@@ -168,9 +176,8 @@ a.category:hover .tit::after {
     width: 1400px;
     margin: 60px auto;
 }
-.health_wrap > .tit > p {
-    display: inline-block;
-    font-size: 1.4rem;
+.health_wrap > .tit > span {
+    font-size: 1.5rem;
     color: #0074aa;
 }
 
@@ -241,8 +248,8 @@ a.category:hover .tit::after {
     .notice_wrap .notice {
         width: 100%;
     }
-    .notice .notice1, .notice2 {
-        width: 600px;
+    .notice .notice1, .notice .notice2 {
+        width: 50%;
     }
 
     .brand_bg {
@@ -266,8 +273,8 @@ a.category:hover .tit::after {
         z-index: 1;
     }
     .brand .brand_intro {
-        float: left;
         width: 50%;
+        margin-left: 5%;
         text-shadow: 1px 1px 1px #000;
     }
     .content .health_wrap {
@@ -287,15 +294,6 @@ a.category:hover .tit::after {
         position: static;
         text-align: center;
         margin-top: 300px;
-    }
-    .main .txt_box h1 {
-        color: #fff;
-        font-size: 6rem;
-    }
-    .main .txt_box p {
-        color: #fff;
-        font-size: 2.8rem;
-        margin-top: 10px;
     }
 
     .notice_wrap .notice{
@@ -317,18 +315,88 @@ a.category:hover .tit::after {
 
 @media screen and (max-width: 1023px) {
     .content .category_wrap {
-        width: 100%;
-    }
-    .category_wrap a.category {
-        width: 100%;
         justify-content: center;
-        margin-top: 20px;
     }
+
+    .brand_nine > .brand_intro > p:nth-of-type(n+4) {
+        display: none;
+    }
+    .brand_nine > .brand_intro > p:nth-of-type(3) {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
     .health .book {
         flex: 1 1 0;
     }    
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 639px) {
+    .content .category_wrap {
+        margin: 30px auto;
+    }
+    .category_wrap a.category {
+        margin: 20px 0;
+    }
+    .category_wrap a.category > img {
+        float: none;
+        margin-right: 0;
+    }
+    .category_wrap a.category > .tit {
+        float: none;
+        text-align: center;
+        margin-top: 20px;
+        font-size: 2.2rem;
+    }
+    a.category .tit::after {
+        margin: 10px auto;
+    }
+
+    .notice p {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .main {
+        height: 620px;
+    }    
+    .main .txt_box h1 {
+        font-size: 4.6rem;
+    }
+    .main .txt_box p {
+        font-size: 2rem;
+    }
+
+    .notice h2 {
+        font-size: 1.5rem;
+    }
+    .notice p {
+        max-width: 200px;
+        margin-left: 20px;
+        font-size: 1.3rem;
+    }
     
+    .brand .brand_intro {
+        float: none;
+        display: inline-block;
+        margin-top: 20px;
+        width: 90%;
+        margin-left: 0;
+    }
+
+    .yuilhan .analects {
+        position: static;
+        margin-top: 40px;
+    }
+    .analects > p {
+        font-size: 1.6rem;
+    }
+    .analects > h1 {
+        font-size: 2rem;
+    }
+    .analects > p:last-of-type {
+        font-size: 1.2rem;
+    }    
 }

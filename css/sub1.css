@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+.sub_content {
+    width: 1400px;
+    margin: 0 auto;
+}
+.sub_content .location {
+    margin-top: 40px;
+}
+.sub_content .location > h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.sub_content .location > p {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+}
+.sub_content .location > span {
+    font-size: 1.4rem;
+}
+
+.fas {
+    color: #008944;
+}
+
+.location .public_transport {
+    overflow: hidden;
+}

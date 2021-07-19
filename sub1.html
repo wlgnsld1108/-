@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유한소개</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/sub1.css">
+    <link rel="stylesheet" href="library/fontawesome-free-5.15.3-web/css/all.min.css">
+</head>
+<body>
+    <div id="bg_cover"></div>
+    <div class="header_wrap">
+        <header class="header">
+            <div class="nav_bar">
+                <a href="#" class="menu_bar">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+            <!-- 네비게이션 바 -->
+
+            <div class="nav_menu">
+                <ul>
+                    <li class="top_menu"><a href="#">유한소개</a></li>
+                    <li><a href="#">회사개요</a></li>
+                    <li><a href="#">회사 연혁</a></li>
+                    <li><a href="#">사업 분야</a></li>
+                    <li><a href="#">홍보</a></li>
+                    <li><a href="#">가족 회사</a></li>
+                    <li><a href="#">오시는 길</a></li>
+                </ul>
+                <ul>
+                    <li class="top_menu"><a href="#">제품정보</a></li>
+                    <li><a href="#">제품정보</a></li>
+                    <li><a href="#">제품소식</a></li>
+                    <li><a href="#">제품 외형별 검색</a></li>
+                    <li><a href="#">가정상비약</a></li>
+                    <li><a href="#">브랜드 이야기</a></li>
+                    <li><a href="#">약국찾기</a></li>
+                </ul>
+                <ul>
+                    <li class="top_menu"><a href="#">창업자 유일한</a></li>
+                    <li><a href="#">유일한박사 온라인기념관</a></li>
+                </ul>
+                <ul>
+                    <li class="top_menu"><a href="#">고객센터</a></li>
+                    <li><a href="#">온라인 상담</a></li>
+                    <li><a href="#">뉴스 및 공지</a></li>
+                    <li><a href="#">자주 묻는 질문</a></li>
+                </ul>
+                <div class="lang">
+                    <a href="#">KOR</a>
+                    <a href="#">ENG</a>
+                </div>
+            </div>    
+            <!-- 네비게이션 목록 -->
+
+            <div class="logo">
+                <a href="index.html"><img src="images/logo_w.png" alt="유한양행 로고"></a>
+            </div>
+            <!-- 로고 -->
+
+            <div class="search">
+                <a href="#"><img src="images/search_icon_w.png" alt="검색"></a>
+            </div>
+            <!-- 검색 -->
+
+            <div class="globe">
+                <a href="#"><img src="images/globe_icon_w.png" alt="언어"></a>
+            </div>
+            <!-- 언어 -->
+
+        </header>
+        <!-- 헤더 -->
+
+        <form class="search_wrap">
+            <input type="text" id="search_bar" placeholder="찾으실 제품명을 입력해주세요">
+            <input type="submit" id="search_btn" value="검색">
+        </form>
+        <!-- 검색창 -->
+
+    </div>
+    <!-- 헤더 랩 -->
+
+    <div class="sub_top_bg">
+        <h1>유한소개</h1>
+    </div>
+    <!-- 서브페이지 타이틀 -->
+    
+    <div class="sub_content">
+        <h2 class="tit">찾아오시는 길</h2>
+        <div id="map" style="width:100%;height:400px;margin-top: 40px;"></div>
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b451b366c726a63e934b057008a20546"></script>
+        <script>
+            var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+                mapOption = { 
+                    center: new kakao.maps.LatLng(37.512767984982254, 126.93403773071056), // 지도의 중심좌표
+                    level: 4 // 지도의 확대 레벨
+                };
+                
+                var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+                
+                var imageSrc = 'images/marker.png', // 마커이미지의 주소입니다    
+                imageSize = new kakao.maps.Size(75, 99), // 마커이미지의 크기입니다
+                imageOption = {offset: new kakao.maps.Point(40, 99)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+                
+                // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+                var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
+                markerPosition = new kakao.maps.LatLng(37.512767984982254, 126.93403773071056); // 마커가 표시될 위치입니다
+                
+                // 마커를 생성합니다
+                var marker = new kakao.maps.Marker({
+                    position: markerPosition, 
+                    image: markerImage // 마커이미지 설정 
+                });
+                
+                // 마커가 지도 위에 표시되도록 설정합니다
+                marker.setMap(map);            
+        </script>
+
+        <div class="location">
+            <h2><i class="fas fa-map-marker-alt"></i> 주소 및 연락처</h2>
+            <p>서울특별시 동작구 노량진로 74 대방동</p>
+            <span><i class="fas fa-phone-alt"></i> TEL: 02-828-0181 &nbsp;&nbsp;&nbsp; <i class="fas fa-fax"></i> FEX: 02-828-0300</span>
+            <div class="public_transport">
+
+            </div>
+        </div>
+    </div>
+    <!-- 서브 컨텐츠 -->
+
+    <div class="footer_wrap">
+        <footer class="footer">
+            <div class="ft_left">
+                <div class="privacy_policy">
+                    <ul>
+                        <li><a href="#">사이트이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">영상정보처리기기 운영·관리 방침</a></li>
+                        <li><a href="#">이메일무단수집거부</a></li>
+                        <li><a href="#">스팸정책</a></li>
+                        <li><a href="#">법적고지</a></li>
+                        <li><a href="#">사이트이용 도움말</a></li>
+                    </ul>
+                </div>
+                <address>
+                    서울시 동작구 노량진로 74문의전화 : 02)828-0181FAX : 02)828-0050대표자 : 조욱제사업자등록번호 : 118-81-00601
+                    <br>COPYRIGHT (C) 2013 YUHAN. ALL RIGHT RESERVED
+                </address>
+            </div>
+            <div class="ft_right">
+                <select id="ft_select" onchange="onFamilySite(this.value)">
+                    <option value="" selected disabled>Family Site 바로가기</option>
+                    <option value="https://blog.naver.com/beecomcyuhan">삐콤씨</option>
+                    <option value="http://www.senseday.co.kr">센스데이</option>							
+                    <option value="http://zyrtec.kr">지르텍</option>
+                    <option value="http://www.armnhammer.co.kr">ARM &amp; HAMMER</option>
+                    <option value="http://www.yuhan-kimberly.co.kr">유한킴벌리</option> 
+                    <option value="http://www.yuhanclorox.co.kr">유한크로락스</option> 
+                    <option value="http://www.yuhanchem.co.kr">주식회사 유한화학</option> 
+                    <option value="http://www.wyethkorea.com">한국 와이어스 주식회사</option>
+                    <option value="http://www.janssenkorea.com">주식회사 한국얀센</option>
+                    <option value="http://www.yuhanmedica.co.kr">유한메디카</option>
+                </select>
+                <br>
+                <img src="images/yuhan_mark.png" alt="인증마크">
+            </div>
+        </footer>
+        <!-- 푸터 -->
+
+    </div>
+    <!-- 푸터 랩 -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+</html>

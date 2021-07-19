@@ -26,7 +26,7 @@ var bgImg = [
 $(function() {
     $('.slick-dots li').on('click', function(){
         var idx = $(this).index();
-        var url = "url('images/" + bgImg[idx] + "') no-repeat 90% " + bgColor[idx];
+        var url = "url('images/" + bgImg[idx] + "') no-repeat 90% 80%" + bgColor[idx];
 
         $('.brand_bg').css({
             'background': url
