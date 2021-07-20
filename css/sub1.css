@@ -1,5 +1,13 @@
 @charset "utf-8";
 
+.sub_top_bg {
+    width: 100%;
+    height: 350px;
+    padding-top: 200px;
+    background: linear-gradient( rgba(0, 0, 0, .5), rgba(0, 0, 0, .5) ),
+    url('../images/yuhan_intro.jpg') no-repeat;
+}
+
 .sub_content {
     width: 1400px;
     margin: 0 auto;
@@ -7,7 +15,7 @@
 .sub_content .location {
     margin-top: 40px;
 }
-.sub_content .location > h2 {
+.sub_content .location > h3 {
     font-size: 2rem;
     margin-bottom: 20px;
 }
@@ -17,6 +25,7 @@
 }
 .sub_content .location > span {
     font-size: 1.4rem;
+    margin-right: 20px;
 }
 
 .fas {
@@ -25,4 +34,63 @@
 
 .location .public_transport {
     overflow: hidden;
+    margin-top: 40px;
+}
+.public_transport i {
+    float: left;
+    margin-right: 20px;
+}
+.public_transport .trans {
+    float: left;
+}
+.public_transport p {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+.public_transport .subway {
+    width: 460px;
+    float: left;
+}
+.public_transport .bus {
+    width: 460px;
+    float: left;
+}
+
+@media screen and (max-width: 1440px) {
+    .sub_content {
+        width: 100%;
+    }
+    .sub_content > h2.tit {
+        padding-left: 5%;
+    }
+    .sub_content .location {
+        padding: 0 5%;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .public_transport .bus {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 639px) {
+    .public_transport .subway {
+        width: 100%;
+    }
+    .public_transport .bus {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sub_content .location > span {
+        display: block;
+        margin-top: 10px;
+    }
+    
+    .public_transport .trans {
+        width: 100%;
+        margin-top: 20px;
+    }
 }

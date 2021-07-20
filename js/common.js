@@ -32,7 +32,7 @@ $(function() {
     // 네비게이션 햄버거 메뉴 클릭시
     $('.nav_menu').hide();
     
-    $('.header .nav_bar').click(function(e) {
+    $('.header .nav_bar').on('click', function(e) {
         
         $('.menu_bar').toggleClass('active');
         e.stopPropagation();
@@ -47,7 +47,7 @@ $(function() {
             }
         });
         
-        $('.header .search').click(function(){
+        $('.header .search').one('click', function(){
             $('.menu_bar').removeClass('active');
             $('#bg_cover').show();
             $('.nav_menu').slideUp(200);
@@ -66,7 +66,7 @@ $(function() {
     // 검색바
     $('.search_wrap').hide();
     
-    $('.header .search').click(function(e) {
+    $('.header .search').on('click',function(e) {
         e.stopPropagation();
         $('#bg_cover').toggle();
         $('.search_wrap').slideToggle(200);        
@@ -74,11 +74,11 @@ $(function() {
         $(document).click(function(e){
             if (!$(e.target).is('.search_wrap, input')) {
                 $('#bg_cover').hide();
-                $('.search_wrap').slideUp(200);     
-            } 
+                $('.search_wrap').slideUp(200);
+            }
         });
         
-        $('.header .nav_bar').click(function(){
+        $('.header .nav_bar').one('click', function(){
             $('#bg_cover').show();
             $('.search_wrap').slideUp(200);
         });

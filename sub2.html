@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>유한소개</title>
+    <title>제품정보</title>
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/sub1.css">
+    <link rel="stylesheet" href="css/sub2.css">
     <link rel="stylesheet" href="library/fontawesome-free-5.15.3-web/css/all.min.css">
 </head>
 <body>
@@ -86,73 +86,59 @@
     <!-- 헤더 랩 -->
 
     <div class="sub_top_bg">
-        <h1>유한소개</h1>
+        <h1>제품정보</h1>
     </div>
     <!-- 서브페이지 타이틀 -->
     
     <div class="sub_content">
-        <h2 class="tit">찾아오시는 길</h2>
-        <div id="map" style="width:100%;height:400px;margin-top: 40px;"></div>
-        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b451b366c726a63e934b057008a20546"></script>
-        <script>
-            var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-                mapOption = { 
-                    center: new kakao.maps.LatLng(37.512767984982254, 126.93403773071056), // 지도의 중심좌표
-                    level: 4 // 지도의 확대 레벨
-                };
-                
-                var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-                
-                var imageSrc = 'images/marker.png', // 마커이미지의 주소입니다    
-                imageSize = new kakao.maps.Size(75, 99), // 마커이미지의 크기입니다
-                imageOption = {offset: new kakao.maps.Point(40, 99)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
-                
-                // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
-                var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
-                markerPosition = new kakao.maps.LatLng(37.512767984982254, 126.93403773071056); // 마커가 표시될 위치입니다
-                
-                // 마커를 생성합니다
-                var marker = new kakao.maps.Marker({
-                    position: markerPosition, 
-                    image: markerImage // 마커이미지 설정 
-                });
-                
-                // 마커가 지도 위에 표시되도록 설정합니다
-                marker.setMap(map);            
-        </script>
+        <h2 class="tit">제품정보</h2>
 
-        <div class="location">
-            <h3><i class="fas fa-map-marker-alt"></i> 주소 및 연락처</h3>
-            <p>서울특별시 동작구 노량진로 74 대방동</p>
-            <span>
-                <i class="fas fa-phone-alt"></i>
-                TEL: 02-828-0181
-            </span>
-            <span>
-                <i class="fas fa-fax"></i>
-                FEX: 02-828-0300
-            </span>
-            <div class="public_transport">
-                <div class="subway">
-                    <i class="fas fa-subway fa-5x"></i>
-                    <div class="trans">
-                        <p>지하철 1호선 대방역 2번출구로 나와 노량진 방향으로 600m</p>
-                        <p>지하철 9호선 노량진역 6번 출구로 나와 대방역 방향으로 500m</p>
-                    </div>
-                </div>
-                <div class="bus">
-                    <i class="fas fa-bus fa-5x"></i>
-                    <div class="trans">
-                        <p>간선 150, 605, 640, 641, 650, 462, 507, 360</p>
-                        <p>지선 6515, 5531, 6211, 6411</p>
-                        <p>광역 9408</p>
-                        <p>마을 동작 13-1, 동작01, 동작03, 동작 08, 동작13</p>
-                    </div>
-                </div>
+        <div class="product_tap">
+            <ul>
+                <li class="tap_on">
+                    <a href="#">전문의약품</a>
+                    <div class="product_sub">
+                        <ul>
+                            <li><a href="#">순환기용약(26)</a></li>
+                            <li><a href="#">대사성질환 치료제(14)</a></li>
+                            <li><a href="#">호흡기/알레르기용약(10)</a></li>
+                            <li><a href="#">소화기관용약(13)</a></li>
+                            <li><a href="#">진통제/류마티스관절염약(8)</a></li>
+                            <li><a href="#">마취제(1)</a></li>
+                            <li><a href="#">비뇨기과생식기관용약(6)</a></li>
+                            <li><a href="#">호르몬제 및 기타(5)</a></li>
+                            <li><a href="#">비타민 주사제 및 기타(6)</a></li>
+                            <li><a href="#">항균제(17)</a></li>
+                            <li><a href="#">결핵치료제(4)</a></li>
+                            <li><a href="#">항바이러스제(3)</a></li>
+                            <li><a href="#">항진균제(2)</a></li>
+                            <li><a href="#">항암제(8)</a></li>
+                            <li><a href="#">신경정신계 약물(6)</a></li>
+                            <li><a href="#">영양 수액제(8)</a></li>
+                            <li><a href="#">말초신경병증성 통증치료제(1)</a></li>
+                        </ul>
+                    </div>        
+                </li>
+                <li><a href="#">일반의약품</a></li>
+                <li><a href="#">의약외품</a></li>
+                <li><a href="#">건강기능식품</a></li>
+                <li><a href="#">생활용품</a></li>
+                <li><a href="#">동물약품</a></li>
+                <li><a href="#">의료기기 / 진단시약</a></li>
+                <li><a href="#">기타/ 염모제</a></li>
+                <li><a href="#">치과용품</a></li>
+                <li><a href="#">전체제품 보기</a></li>
+            </ul>
+        </div>
+        <!-- 제품 분류 버튼 -->
+        
+        <div class="product_item">
+            <div class="item1">
+                <img src="https://via.placeholder.com/200x200" />
             </div>
         </div>
-        <!-- 주소 및 연락처, 오시는 방법 -->
-        
+        <!-- 제품 목록 -->
+
     </div>
     <!-- 서브 컨텐츠 -->
 
