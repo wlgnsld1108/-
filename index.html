@@ -38,7 +38,7 @@
                     <li><a href="sub1.html">오시는 길</a></li>
                 </ul>
                 <ul>
-                    <li class="top_menu"><a href="sub2.html">제품정보</a></li>
+                    <li class="top_menu"><a href="#">제품정보</a></li>
                     <li><a href="sub2.html">제품정보</a></li>
                     <li><a href="#">제품소식</a></li>
                     <li><a href="#">제품 외형별 검색</a></li>
@@ -82,8 +82,12 @@
         <!-- 헤더 -->
 
         <form class="search_wrap">
-            <input type="text" id="search_bar" placeholder="찾으실 제품명을 입력해주세요">
-            <input type="submit" id="search_btn" value="검색">
+            <label for="text">
+                <input type="text" id="search_bar" title="제품명 입력" placeholder="찾으실 제품명을 입력해주세요">
+            </label>
+            <label for="submit">
+                <input type="submit" id="search_btn" title="검색" value="검색">
+            </label>
         </form>
         <!-- 검색창 -->
 
@@ -357,19 +361,21 @@
                 </address>
             </div>
             <div class="ft_right">
-                <select id="ft_select" onchange="onFamilySite(this.value)">
-                    <option value="" selected disabled>Family Site 바로가기</option>
-                    <option value="https://blog.naver.com/beecomcyuhan">삐콤씨</option>
-                    <option value="http://www.senseday.co.kr">센스데이</option>							
-                    <option value="http://zyrtec.kr">지르텍</option>
-                    <option value="http://www.armnhammer.co.kr">ARM &amp; HAMMER</option>
-                    <option value="http://www.yuhan-kimberly.co.kr">유한킴벌리</option> 
-                    <option value="http://www.yuhanclorox.co.kr">유한크로락스</option> 
-                    <option value="http://www.yuhanchem.co.kr">주식회사 유한화학</option> 
-                    <option value="http://www.wyethkorea.com">한국 와이어스 주식회사</option>
-                    <option value="http://www.janssenkorea.com">주식회사 한국얀센</option>
-                    <option value="http://www.yuhanmedica.co.kr">유한메디카</option>
-                </select>
+                <label for="ft_select">
+                    <select id="ft_select" title="패밀리사이트" onchange="onFamilySite(this.value)">
+                        <option value="" selected disabled>Family Site 바로가기</option>
+                        <option value="https://blog.naver.com/beecomcyuhan">삐콤씨</option>
+                        <option value="http://www.senseday.co.kr">센스데이</option>							
+                        <option value="http://zyrtec.kr">지르텍</option>
+                        <option value="http://www.armnhammer.co.kr">ARM &amp; HAMMER</option>
+                        <option value="http://www.yuhan-kimberly.co.kr">유한킴벌리</option> 
+                        <option value="http://www.yuhanclorox.co.kr">유한크로락스</option> 
+                        <option value="http://www.yuhanchem.co.kr">주식회사 유한화학</option> 
+                        <option value="http://www.wyethkorea.com">한국 와이어스 주식회사</option>
+                        <option value="http://www.janssenkorea.com">주식회사 한국얀센</option>
+                        <option value="http://www.yuhanmedica.co.kr">유한메디카</option>
+                    </select>
+                </label>
                 <br>
                 <img src="images/yuhan_mark.png" alt="인증마크">
             </div>

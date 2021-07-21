@@ -309,6 +309,10 @@ a.category:hover .tit::after {
 }
 
 @media screen and (max-width: 1280px) {
+    .popup {
+        display: none;
+    }
+    
     .main {
         height: 720px;
     }    

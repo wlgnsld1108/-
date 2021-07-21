@@ -60,6 +60,11 @@ body {font-family: 'Nanum Gothic', sans-serif;}
     height: 2px;
     background: #fff;
     color: transparent;
+    -ms-user-select: none; 
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .menu_bar span:first-child {
@@ -226,7 +231,6 @@ input:focus {
     }
     .nav_menu > ul > li.top_menu::after {
         content: "+";
-        display: inline-block;
         position: absolute;
         top: 20px;
         right: 20px;
@@ -238,7 +242,7 @@ input:focus {
         font-size: 2rem;
     }
     .nav_menu > ul > li > a {
-        display: inline-block;
+        display: block;
         text-indent: 30px;
         font-size: 1.6rem;
         line-height: 0;
