@@ -1,5 +1,5 @@
 // 팝업창
-$('.popup p a').click(function() {
+$('.popup p').click(function() {
     $('.popup').hide();
 });
 

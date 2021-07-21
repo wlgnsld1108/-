@@ -16,11 +16,9 @@
     padding: 10px;
     text-align: right;
     background: #000;
-}
-.popup > p > a {
-    padding: 10px;
     font-size: 1.6rem;
     color: #fff;
+    cursor: pointer;
 }
 
 /* 메인 */

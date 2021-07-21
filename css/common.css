@@ -59,6 +59,7 @@ body {font-family: 'Nanum Gothic', sans-serif;}
     width: 100%;
     height: 2px;
     background: #fff;
+    color: transparent;
 }
 
 .menu_bar span:first-child {
