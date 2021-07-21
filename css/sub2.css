@@ -68,6 +68,9 @@
 .product_sub > ul > li > a {
     font-size: 1.4rem;
 }
+.product_sub > ul > li > a:hover {
+    color: #008944;
+}
 
 /* 제품 목록 */
 .product_item {
@@ -97,12 +100,17 @@
 .item > a {
     display: block;
     text-align: center;
-    padding: 79px 0;
+    height: 400px;
+    padding-top: 100px;
+}
+.item > a > img {
+    width: 200px;
 }
 .item > a > p {
     font-size: 1.6rem;
     font-weight: 700;
-    margin-top: 20px;
+    width: 90%;
+    margin: 20px auto;
 }
 
 @media screen and (max-width: 1440px) {

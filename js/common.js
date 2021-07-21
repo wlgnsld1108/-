@@ -40,7 +40,7 @@ $(function() {
         $('.nav_menu').slideToggle(200);
         
         $(document).click(function(e){
-            if (!$(e.target).is('.nav_menu, ul, li, a')) {
+            if (!$(e.target).is('.nav_menu li a')) {
                 $('.menu_bar').removeClass('active');
                 $('#bg_cover').hide();
                 $('.nav_menu').slideUp(200);
@@ -72,7 +72,7 @@ $(function() {
         $('.search_wrap').slideToggle(200);        
         
         $(document).click(function(e){
-            if (!$(e.target).is('.search_wrap, input')) {
+            if (!$(e.target).is('input')) {
                 $('#bg_cover').hide();
                 $('.search_wrap').slideUp(200);
             }
