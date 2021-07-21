@@ -1,3 +1,8 @@
+// 팝업창
+$('.popup p a').click(function() {
+    $('.popup').hide();
+});
+
 // 슬라이드 내용 변경
 var bgColor = [
     'rgba(244, 133, 67, 1)',
