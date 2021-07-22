@@ -73,6 +73,9 @@ h3.sub_tit > span::before {
     color: orange;
     font-size: 1.2rem;
 }
+.sub_content .inquiry {
+    
+}
 
 @media screen and (max-width: 1440px) {
 
