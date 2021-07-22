@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+.sub_top_bg {
+    width: 100%;
+    height: 350px;
+    padding-top: 200px;
+    background: linear-gradient( rgba(0, 0, 0, .5), rgba(0, 0, 0, .5) ),
+    url('../images/yuhan_customer.jpg') no-repeat center;
+}
+
+.sub_content {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.sub_content h3.sub_tit {
+    font-size: 1.6rem;
+    margin-top: 40px;
+}
+.sub_content .terms {
+    border: 1px solid #e6e6e6;
+    margin-top: 15px;
+}
+.terms .agree_box {
+    font-size: 1.4rem;
+    color: #555;
+    line-height: 2.5rem;
+    overflow: auto;
+    height: 300px;
+    padding: 15px 20px;
+}
+.agree_box b {
+    display: block;
+    margin: 10px 0;
+}
+
+.sub_content .agree_sub {
+    margin-top: 20px;
+    line-height: 2rem;
+}
+.agree_sub li {
+    font-size: 1.4rem;
+    color: #555;
+    text-indent: 10px;
+}
+.agree_sub li::before {
+    content: "·";
+    font-size: 2rem;
+    margin: 5px;
+    color: #666;
+    vertical-align: middle;
+}
+.sub_content .checkbox_wrap {
+    text-align: right;
+    font-size: 1.4rem;
+    color: #333;
+}
+.checkbox_wrap #check {
+    vertical-align: middle;
+}
+
+.sub_content form {
+    margin-top: 40px;
+    border-top: 2px solid #333;
+}
+h3.sub_tit > span {
+    font-size: 1.2rem;
+    color: #666;
+    margin-left: 10px;
+}
+h3.sub_tit > span::before {
+    content: "*";
+    color: orange;
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 1440px) {
+
+}
+
+@media screen and (max-width: 1023px) {
+
+}
+
+@media screen and (max-width: 639px) {
+
+}
