@@ -406,8 +406,6 @@ input:focus {
 .ft_right #ft_select {
     padding: 6px 0 4px 4px;
     margin-bottom: 10px;
-}
-select{
     appearance:none;
     -webkit-appearance:none;
     -moz-appearance:none;

@@ -63,18 +63,43 @@
     margin-top: 40px;
     border-top: 2px solid #333;
 }
-h3.sub_tit > span {
+span.required {
     font-size: 1.2rem;
     color: #666;
     margin-left: 10px;
 }
-h3.sub_tit > span::before {
+span.required::before {
     content: "*";
     color: orange;
     font-size: 1.2rem;
 }
-.sub_content .inquiry {
-    
+.sub_content table {
+    width: 100%;
+    font-size: 1.6rem;
+    border-spacing: 0;
+}
+.sub_content table th {
+    text-align: left;
+    padding: 20px;
+    background: #f9f9f9;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+.sub_content table td {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+.sub_content .inquiry_btn {
+    width: 100px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background: #008944;
+}
+.inquiry_btn a {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 700;
 }
 
 @media screen and (max-width: 1440px) {

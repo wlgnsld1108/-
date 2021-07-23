@@ -212,185 +212,132 @@
         </div>
         <!-- 이용약관 / 동의 -->
 
-        <div class="inquiry">
-            <h3 class="sub_tit">문의 등록 <span> 표시는 필수항목입니다.</span></h3>
-            <form>
-                <table>
-                    <colgroup>
-                        <col style="width: 200px">
-                    </colgroup>
-                    <tbody>
-                        <tr>
-                            <th scope="row">
-                                <label for="name">이름</label>
-                            </th>
-                            <td colspan="3">
-                                <input type="text" id="name" title="이름을 입력하세요." name="name" required="이름을 입력하세요." maxlength="20">
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">
-                                <label for="gender">성별</label>
-                            </th>
-                            <td>
-                                <select name="gender" id="gender" required="성별을 입력하세요.">
-                                    <option>[성별]</option>
-                                    <option value="남">남</option>
-                                    <option value="여">여</option>
-                                </select>
-                            </td>
-                        </tr>
-                            <th scope="row">
-                                <label for="age">나이</label>
-                                <td>
-                                    <select name="age" id="age" required="나이를 선택하세요.">
-                                        <option>[나이선택]</option>
-                                        <option value="10">10대</option>
-                                        <option value="20">20대</option>
-                                        <option value="30">30대</option>
-                                        <option value="40">40대</option>
-                                    <option value="50">50대</option>
-                                    <option value="60">60대</option>
-                                    <option value="70">70대</option>
-                                    <option value="80">80대</option>
-                                </select>
-                            </td>
+        <h3 class="sub_tit">문의 등록 <span class="required"> 표시는 필수항목입니다.</span></h3>
+        <form>
+            <table>
+                <caption>온라인 상담 문의</caption>
+                <colgroup>
+                    <col style="width: 200px">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>
+                            <label for="inquiry_select">구분 <span class="required"></span></label>
                         </th>
-                        <tr id="inquiry_division">
-                            <th scope="row">
-                                <label for="select1">문의 구분</label>
-                            </th>
-                            <td>
-                                <select id="select1" name="Foreword" required="문의를 선택하세요.">
-                                    <option value="">[문의 선택]</option>
-                                    <option value="기업문의">기업문의</option>
-                                    <option value="유한재단 문의">유한재단 문의</option>
-                                    <option value="제품" selected="">제품</option>
-                                    <option value="IR">IR</option>
-                                    <option value="홈페이지 및 기타">홈페이지 및 기타</option>
-                                    <option value="아이디어 제안">아이디어 제안</option>
-                                </select>
-                            </td>
-                            <th scope="row">
-                                <label for="select2">상세 구분</label>
-                            </th>
-                            <td>
-                                <select id="select2" name="Bbs_Gubun" required="상세문의를 선택하세요.">
-                                    <option>[상세문의 선택]</option>
-                                    <option value="효과">효과</option>
-                                    <option value="사용법">사용법</option>
-                                    <option value="부작용">부작용</option>
-                                    <option value="불량">불량</option>
-                                    <option value="건의사항">건의사항</option>
-                                    <option value="기타">기타</option>
-                                    <option value="제품 문의">제품 문의</option>
-                                    <option value="보험약가 및 보험코드">보험약가 및 보험코드</option>
-                                    <option value="거래요청">거래요청</option>
-                                    <option value="성분">성분</option>
-                                    <option value="영양제">영양제</option>
-                                    <option value="건강기능식품">건강기능식품</option>
-                                    <option value="외용제">외용제</option>
-                                    <option value="진단시약">진단시약</option>
-                                    <option value="호흡기관용약">호흡기관용약</option>
-                                    <option value="대사질환제">대사질환제</option>
-                                    <option value="소화기관용약">소화기관용약</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">
-                                <label for="inquiry">제품명</label>
-                            </th>
-                            <td colspan="3">
-                                <input type="text" id="inquiry" name="YOC_YPRD_NAME" required="제품명을 입력하세요." maxlength="200">
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">
-                                <label for="email">이메일</label>
-                            </th>
-                            <td colspan="3">
-                                <input type="text" id="email" maxlength="20" required="이메일을 입력하세요.">@
-                                <input type="text" id="email2" maxlength="20" required="이메일을 입력하세요.">
+                        <td>
+                            <select id="inquiry_select" name="inquiry" required="문의를 선택하세요.">
+                                <option value="">[문의 선택]</option>
+                                <option value="기업문의">기업문의</option>
+                                <option value="유한재단 문의">유한재단 문의</option>
+                                <option value="제품" selected="">제품</option>
+                                <option value="IR">IR</option>
+                                <option value="홈페이지 및 기타">홈페이지 및 기타</option>
+                                <option value="아이디어 제안">아이디어 제안</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <!-- 구분 -->
 
-                                <select id="email3">
-                                    <option selected="selected">[직접입력]</option>
-                                    <option value="naver.com">naver.com</option>
-                                    <option value="hanmail.net">hanmail.net</option>
-                                    <option value="nate.com">nate.com</option>
-                                    <option value="hotmaiil.com">hotmaiil.com</option>
-                                    <option value="paran.com">paran.com</option>
-                                    <option value="yahoo.com">yahoo.com</option>
-                                    <option value="gmail.com">gmail.com</option>
-                                    <option value="korea.com">korea.com</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">
-                                <label for="phone">연락처</label>
-                            </th>
-                            <td colspan="3">
-                                <select id="phone">
-                                    <option value="010">010</option>
-                                    <option value="011">011</option>
-                                    <option value="016">016</option>
-                                    <option value="017">017</option>
-                                    <option value="018">018</option>
-                                    <option value="019">019</option>
-                                </select> - 
-                                <input type="text" id="phone2" maxlength="4"> - 
-                                <input type="text" id="phone3" maxlength="4">
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">
-                                <label for="inquiry_tit">문의제목</label>
-                            </th>
-                            <td colspan="3">
-                                <input type="text" id="inquiryTitle" name="title" required="제목을 입력하세요." maxlength="200">
-                            </td>
-                        </tr>
-                        <tr class="inquiry_txt">
-                            <td colspan="4">
-                                <p>
-                                    <label for="text">문의내용</label>
-                                    <textarea id="text" required="문의 내용을 입력하세요." maxlength="1000">
-                                    </textarea>
-                                </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">
-                                <label for="file">파일첨부</label>
-                            </th>
-                            <td colspan="3">
-                                <div id="original">
-                                    <div class="file">
-                                        <input type="file" name="file">
-                                    </div>
-                                </div>
+                    <tr>
+                        <th>
+                            <label for="name">이름 <span class="required"></span></label>
+                        </th>
+                        <td>
+                            <input type="text" id="name" title="이름을 입력하세요." name="name" required="이름을 입력하세요." maxlength="20">
+                        </td>
+                    </tr>
+                    <!-- 이름 -->
 
-                                <div class="real">
-                                    <div class="file">
-                                        <input class="file">
-                                        <div class="mt5">
-                                            <input type="file" id="file" name="file">
-                                            <label class="lb" for="file">
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>	
-                            </td>
-                        </tr>	
-                    </tbody>
-                </table>
+                    <tr>
+                        <th>
+                            <label for="email">이메일 <span class="required"></span></label>
+                        </th>
+                        <td>
+                            <input type="text" id="email" maxlength="20" required="이메일을 입력하세요."> @ 
+                            <input type="text" id="email2" maxlength="20" required="이메일을 입력하세요.">
+                            <select id="email3">
+                                <option selected="selected">[직접입력]</option>
+                                <option value="naver.com">naver.com</option>
+                                <option value="hanmail.net">hanmail.net</option>
+                                <option value="nate.com">nate.com</option>
+                                <option value="hotmaiil.com">hotmaiil.com</option>
+                                <option value="paran.com">paran.com</option>
+                                <option value="yahoo.com">yahoo.com</option>
+                                <option value="gmail.com">gmail.com</option>
+                                <option value="korea.com">korea.com</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <!-- 이메일 -->
 
-                <div class="inquiry_btn">
-                    <a href="#">확인</a>
-                </div>
-            </form>
-        </div>
+                    <tr>
+                        <th>
+                            <label for="phone">연락처 <span class="required"></span></label>
+                        </th>
+                        <td>
+                            <select id="phone">
+                                <option value="010">010</option>
+                                <option value="011">011</option>
+                                <option value="016">016</option>
+                                <option value="017">017</option>
+                                <option value="018">018</option>
+                                <option value="019">019</option>
+                            </select> - 
+                            <input type="text" id="phone2" maxlength="4"> - 
+                            <input type="text" id="phone3" maxlength="4">
+                        </td>
+                    </tr>
+                    <!-- 연락처 -->
+
+                    <tr>
+                        <th>
+                            <label for="product_name">제품명</label>
+                        </th>
+                        <td>
+                            <input type="text" id="product_name" name="YOC_YPRD_NAME" required="제품명을 입력하세요." maxlength="200">
+                        </td>
+                    </tr>
+                    <!-- 제품명 -->
+
+                    <tr>
+                        <th>
+                            <label for="inquiry_tit">제목 <span class="required"></span></label>
+                        </th>
+                        <td>
+                            <input type="text" id="inquiry_tit" name="title" required="제목을 입력하세요." maxlength="200">
+                        </td>
+                    </tr>
+                    <!-- 제목 -->
+
+                    <tr>
+                        <th>
+                            <label for="text">내용 <span class="required"></span></label>
+                        </th>
+                        <td>
+                            <textarea id="text" required="문의 내용을 입력하세요." maxlength="1000"></textarea>
+                        </td>
+                    </tr>
+                    <!-- 내용 -->
+
+                    <tr>
+                        <th>
+                            <label for="file">파일첨부</label>
+                        </th>
+                        <td>
+                            <div class="file">
+                                <input type="file" name="file">
+                            </div>
+                        </td>
+                    </tr>	
+                    <!-- 파일첨부 -->
+
+                </tbody>
+            </table>
+
+            <div class="inquiry_btn">
+                <a href="#">확인</a>
+            </div>
+        </form>
         <!-- 문의 등록 -->
 
     </div>
