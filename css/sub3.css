@@ -78,6 +78,10 @@ span.required::before {
     font-size: 1.6rem;
     border-spacing: 0;
 }
+table caption {
+    visibility: hidden;
+    height: 0;
+}
 .sub_content table th {
     text-align: left;
     padding: 20px;
