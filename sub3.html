@@ -321,12 +321,15 @@
 
                     <tr>
                         <th>
-                            <label for="file">파일첨부</label>
+                            <label for="file">첨부파일</label>
                         </th>
                         <td>
-                            <div class="file">
-                                <input type="file" name="file">
+                            <div class="filebox">
+                                <input class="upload-name" value="" disabled="disabled">
+                                <label for="ex_filename">파일 첨부</label>
                             </div>
+                            <button type="button" class="fileplus">+</button>
+                            <button type="button" class="fileminus">-</button>
                         </td>
                     </tr>	
                     <!-- 파일첨부 -->
@@ -388,6 +391,6 @@
     <!-- 푸터 랩 -->
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/common.js"></script>
-    <script src="js/sub2.js"></script>
+    <script src="js/sub3.js"></script>
 </body>
 </html>
