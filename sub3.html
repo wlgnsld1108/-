@@ -15,9 +15,9 @@
         <header class="header">
             <div class="nav_bar">
                 <a href="#" class="menu_bar">
-                    <p></p>
-                    <p></p>
-                    <p></p>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </a>
             </div>
             <!-- 네비게이션 바 -->
@@ -226,10 +226,10 @@
                         </th>
                         <td>
                             <select id="inquiry_select" name="inquiry" required="문의를 선택하세요.">
-                                <option value="">[문의 선택]</option>
+                                <option>문의 선택</option>
                                 <option value="기업문의">기업문의</option>
                                 <option value="유한재단 문의">유한재단 문의</option>
-                                <option value="제품" selected="">제품</option>
+                                <option value="제품">제품</option>
                                 <option value="IR">IR</option>
                                 <option value="홈페이지 및 기타">홈페이지 및 기타</option>
                                 <option value="아이디어 제안">아이디어 제안</option>
@@ -256,7 +256,7 @@
                             <input type="text" id="email" maxlength="20" required="이메일을 입력하세요."> @ 
                             <input type="text" id="email2" maxlength="20" required="이메일을 입력하세요.">
                             <select id="email3">
-                                <option selected="selected">[직접입력]</option>
+                                <option selected="selected">직접입력</option>
                                 <option value="naver.com">naver.com</option>
                                 <option value="hanmail.net">hanmail.net</option>
                                 <option value="nate.com">nate.com</option>
@@ -323,14 +323,16 @@
                         <th>
                             <label for="file">첨부파일</label>
                         </th>
-                        <td>
-                            <div class="filebox">
-                                <input class="upload-name" value="" disabled="disabled">
-                                <label for="ex_filename">파일 첨부</label>
-                                <input type="file" id="ex_filename" class="upload-hidden">
+                        <td id="file_wrap">
+                            <div id="filebox_wrap">
+                                <div class="filebox">
+                                    <input class="upload-name" value="" disabled="disabled">
+                                    <label for="ex_filename">파일 첨부</label>
+                                    <input type="file" id="ex_filename" class="upload-hidden">
+                                </div>
+                                <button type="button" class="fileplus">+</button>
+                                <button type="button" class="fileminus">-</button>
                             </div>
-                            <button type="button" class="fileplus">+</button>
-                            <button type="button" class="fileminus">-</button>
                         </td>
                     </tr>	
                     <!-- 파일첨부 -->

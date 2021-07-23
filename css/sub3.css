@@ -54,6 +54,7 @@
     text-align: right;
     font-size: 1.4rem;
     color: #333;
+    margin-top: 20px;
 }
 .checkbox_wrap #check {
     vertical-align: middle;
@@ -106,7 +107,7 @@ table textarea {
     padding: 20px;
     font-size: 1.5rem;
 }
-.sub_content .filebox input[type="file"] {
+#filebox_wrap .filebox input[type="file"] {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -116,18 +117,18 @@ table textarea {
     clip: rect(0, 0, 0, 0);
     border: 0;
 }
-
-.filebox {
+#filebox_wrap .filebox {
     display: inline-block;
 }
-.filebox label {
+#filebox_wrap .filebox label {
     padding: 10px;
+    display: inline-block;
     color: #999;
     font-size: inherit;
     cursor: pointer;
     border: 1px solid #ccc;
 }
-.filebox .upload-name {
+#filebox_wrap .filebox .upload-name {
     padding: 10px;
     font-size: inherit;
     font-family: inherit;
@@ -136,7 +137,7 @@ table textarea {
     -moz-appearance: none;
     appearance: none;
 }
-table .fileplus, .fileminus {
+.fileplus, .fileminus {
     width: 35px;
     padding: 10px 0;
     background: #fff;
@@ -163,13 +164,10 @@ table .fileplus, .fileminus {
 }
 
 @media screen and (max-width: 1440px) {
-
-}
-
-@media screen and (max-width: 1023px) {
-
-}
-
-@media screen and (max-width: 639px) {
-
+    .sub_content {
+        width: 95%;
+    }
+    .sub_content > h2.tit {
+        padding-left: 5%;
+    }
 }
