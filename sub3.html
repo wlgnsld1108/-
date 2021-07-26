@@ -217,15 +217,16 @@
                 <caption>온라인 상담 문의</caption>
                 <colgroup>
                     <col style="width: 200px">
+                    <col>
                 </colgroup>
                 <tbody>
                     <tr>
-                        <th>
+                        <th scope="row">
                             <label for="inquiry_select">구분 <span class="required"></span></label>
                         </th>
                         <td>
-                            <select id="inquiry_select" name="inquiry" required="문의를 선택하세요.">
-                                <option>문의 선택</option>
+                            <select id="inquiry_select" name="inquiry" required>
+                                <option value="">문의 선택</option>
                                 <option value="기업문의">기업문의</option>
                                 <option value="유한재단 문의">유한재단 문의</option>
                                 <option value="제품">제품</option>
@@ -238,22 +239,22 @@
                     <!-- 구분 -->
 
                     <tr>
-                        <th>
+                        <th scope="row">
                             <label for="name">이름 <span class="required"></span></label>
                         </th>
                         <td>
-                            <input type="text" id="name" title="이름을 입력하세요." name="name" required="이름을 입력하세요." maxlength="20">
+                            <input type="text" id="name" title="이름을 입력하세요." name="name" required maxlength="20">
                         </td>
                     </tr>
                     <!-- 이름 -->
 
                     <tr>
-                        <th>
+                        <th scope="row">
                             <label for="email">이메일 <span class="required"></span></label>
                         </th>
                         <td>
-                            <input type="text" id="email" maxlength="20" required="이메일을 입력하세요."> @ 
-                            <input type="text" id="email2" maxlength="20" required="이메일을 입력하세요.">
+                            <input type="text" id="email" maxlength="20" required> @ 
+                            <input type="text" id="email2" maxlength="20" required>
                             <select id="email3">
                                 <option selected="selected">직접입력</option>
                                 <option value="naver.com">naver.com</option>
@@ -270,7 +271,7 @@
                     <!-- 이메일 -->
 
                     <tr>
-                        <th>
+                        <th scope="row">
                             <label for="phone">연락처 <span class="required"></span></label>
                         </th>
                         <td>
@@ -289,38 +290,38 @@
                     <!-- 연락처 -->
 
                     <tr>
-                        <th>
+                        <th scope="row">
                             <label for="product_name">제품명</label>
                         </th>
                         <td>
-                            <input type="text" id="product_name" name="YOC_YPRD_NAME" required="제품명을 입력하세요." maxlength="200">
+                            <input type="text" id="product_name" name="YOC_YPRD_NAME" required maxlength="200">
                         </td>
                     </tr>
                     <!-- 제품명 -->
 
                     <tr>
-                        <th>
+                        <th scope="row">
                             <label for="inquiry_tit">제목 <span class="required"></span></label>
                         </th>
                         <td>
-                            <input type="text" id="inquiry_tit" name="title" required="제목을 입력하세요." maxlength="200">
+                            <input type="text" id="inquiry_tit" name="title" required maxlength="200">
                         </td>
                     </tr>
                     <!-- 제목 -->
 
                     <tr>
-                        <th>
+                        <th scope="row">
                             <label for="text">내용 <span class="required"></span></label>
                         </th>
                         <td>
-                            <textarea id="text" required="문의 내용을 입력하세요." maxlength="1000"></textarea>
+                            <textarea id="text" required maxlength="1000"></textarea>
                         </td>
                     </tr>
                     <!-- 내용 -->
 
                     <tr>
-                        <th>
-                            <label for="file">첨부파일</label>
+                        <th scope="row">
+                            <label for="ex_filename">첨부파일</label>
                         </th>
                         <td id="file_wrap">
                             <div id="filebox_wrap">
@@ -362,10 +363,10 @@
                         <li><a href="#">사이트이용 도움말</a></li>
                     </ul>
                 </div>
-                <apress>
+                <address>
                     서울시 동작구 노량진로 74문의전화 : 02)828-0181FAX : 02)828-0050대표자 : 조욱제사업자등록번호 : 118-81-00601
                     <br>COPYRIGHT (C) 2013 YUHAN. ALL RIGHT RESERVED
-                </apress>
+                </address>
             </div>
             <div class="ft_right">
                 <label for="ft_select">
