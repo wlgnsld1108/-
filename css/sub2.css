@@ -56,6 +56,7 @@
     background: #f9f9f9;
     position: absolute;
     top: 100px;
+    left: 0;
     display: block;
 }
 .product_tap .product_sub {
