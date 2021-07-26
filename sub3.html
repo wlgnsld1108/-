@@ -7,7 +7,6 @@
     <title>제품정보</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/sub3.css">
-    <link rel="stylesheet" href="library/fontawesome-free-5.15.3-web/css/all.min.css">
 </head>
 <body>
     <div id="bg_cover"></div>
@@ -326,12 +325,12 @@
                         <td id="file_wrap">
                             <div id="filebox_wrap">
                                 <div class="filebox">
-                                    <input class="upload-name" value="" disabled="disabled">
+                                    <input class="upload-name" value="" name="filename" disabled="disabled">
                                     <label for="ex_filename">파일 첨부</label>
                                     <input type="file" id="ex_filename" class="upload-hidden">
+                                    <button type="button" class="fileplus">+</button>
+                                    <button type="button" class="fileminus">-</button>
                                 </div>
-                                <button type="button" class="fileplus">+</button>
-                                <button type="button" class="fileminus">-</button>
                             </div>
                         </td>
                     </tr>	

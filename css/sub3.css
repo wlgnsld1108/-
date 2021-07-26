@@ -118,7 +118,7 @@ table textarea {
     border: 0;
 }
 #filebox_wrap .filebox {
-    display: inline-block;
+    display: block;
 }
 #filebox_wrap .filebox label {
     padding: 10px;
@@ -138,7 +138,7 @@ table textarea {
     appearance: none;
 }
 .fileplus, .fileminus {
-    width: 35px;
+    width: 27px;
     padding: 10px 0;
     background: #fff;
     border: 1px solid #ccc;
