@@ -7,7 +7,7 @@
     height: 606px;
     left: 60%;
     top: 15%;
-    z-index: 9999999999;
+    z-index: 9999;
 }
 .popup img {
     vertical-align: middle;

@@ -83,6 +83,10 @@ $(function() {
             $('.search_wrap').slideUp(200);
         });
     });
+    
+});
+
+
 
 // 패밀리사이트
 function onFamilySite(url) {
@@ -90,5 +94,3 @@ function onFamilySite(url) {
         window.open(url);
     }
 }
-
-});
