@@ -80,10 +80,27 @@ $(function() {
         
         $('.header .nav_bar').one('click', function(){
             $('#bg_cover').show();
-            $('.search_wrap').slideUp(200);
+            $('.search_wrap').slideUp(200);;
         });
     });
+
+    // 검색기능
+    $('#search_bar').keydown(function(keyEvent) {
+        if (keyEvent.keyCode == 13) {
+            $('#search_btn').click();
+            var input = $('#search_bar').val();
+            var redirectURL = 'sub2.html?input=' + input;
+            location.href = redirectURL;
+            return false;
+        }
+    });
     
+    $('#search_btn').click(function() {
+        var input = $('#search_bar').val();
+        var redirectURL = 'sub2.html?input=' + input;
+        location.href = redirectURL;
+        return false;
+    });
 });
 
 
