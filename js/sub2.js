@@ -26,7 +26,6 @@ $(function(){
                 for(var i in data) {
                     var $name = data[i].name;
                     var item = $('.item').eq([i]).find('p').text().match(input, $name);
-
                     
                     if(item) {
                         console.log(item);
