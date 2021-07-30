@@ -17,21 +17,35 @@ $(function(){
     var input = params.get('input');
     console.log(input);
 
-    /* ajax 코드 실행 */
-    $.ajax({
-        url:'ajax/item.json',
-        dataType:'json',
-        success: function(data) {
-            if(data.length > 0) {
-                for(var i in data) {
-                    var $name = data[i].name;
-                    var item = $('.item').eq([i]).find('p').text().match(input, $name);
-                    
-                    if(item) {
-                        console.log(item);
+    if (input) {
+        /* ajax 코드 실행 */
+        $.ajax({
+            url:'ajax/item.json',
+            dataType:'json',
+            success: function(data) {
+                var searchId = []; 
+                if(data.length > 0) {
+                    for(var i in data) {
+                        var name = data[i].name;
+                        var id = data[i].id;
+
+                        if (name.indexOf(input) > -1) {
+                            searchId.push(id);
+                        }
+
+                        // var item = $('.item').eq([i]).find('p').text().match(input, $name);
+                        
+                        // if(item) {
+                        //     console.log(item);
+                        // }
+                    }
+
+                    $(".product_item").children().css("display","none");
+                    for (var i in searchId) {
+                        $("#" + searchId[i]).css("display","block");
                     }
                 }
             }
-        }
-    });
+        });
+    }
 }); 
