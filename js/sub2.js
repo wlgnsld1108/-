@@ -18,7 +18,7 @@ $(function(){
     console.log(input);
 
     if (input) {
-        /* ajax 코드 실행 */
+        /* ajax 코드 실행 및 검색했을때 결과 */
         $.ajax({
             url:'ajax/item.json',
             dataType:'json',
@@ -32,17 +32,11 @@ $(function(){
                         if (name.indexOf(input) > -1) {
                             searchId.push(id);
                         }
-
-                        // var item = $('.item').eq([i]).find('p').text().match(input, $name);
-                        
-                        // if(item) {
-                        //     console.log(item);
-                        // }
                     }
 
-                    $(".product_item").children().css("display","none");
+                    $(".product_item").children().hide();
                     for (var i in searchId) {
-                        $("#" + searchId[i]).css("display","block");
+                        $("#" + searchId[i]).show();
                     }
                 }
             }
